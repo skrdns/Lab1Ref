@@ -3,6 +3,9 @@ class HumanBMI {
     private double height;
 
     public HumanBMI(double weight, double height) {
+        if (weight <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Weight and height must be positive.");
+        }
         this.weight = weight;
         this.height = height;
     }
